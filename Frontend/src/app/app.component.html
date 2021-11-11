@@ -1,0 +1,30 @@
+<h1> FUTV </h1>
+
+
+<br>
+<div mat-dialog-actions align="center">
+<img height="200px" width="200px" [src]=foto>
+</div>
+<br>
+
+<form class="col-md-12 mx-auto mt-2">
+      <div class="form-group">
+          <input type="file" name = "file" (change)="onSelectedFile($event)">
+      </div>
+</form>
+
+<button (click) ="guardar(foto)" mat-raised-button color="primary"> Agregar </button>
+
+
+<button (click) ="servirImagenes()" mat-raised-button color="primary"> Cargar </button>
+
+
+<br>
+<br>
+
+<div fxflex.xs="100%" fxFlex.sm="33%" *ngFor = "let num of arregloFinal">
+   <!--<img img height="200px" width="100px" mat-card-image src= "{{num}}" > -->
+   <div mat-dialog-actions align="center">
+      <img height="200px" width="200px" [src]=num>
+    </div>
+</div>
